@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "calibri";
+    src: local("calibri"),
+         url(../fonts/calibri.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "calibri-bold";
+    src: local("calibri-bold"),
+         url(../fonts/calibri_bold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    background: url(../img/body-bg.png) no-repeat top / cover;
+    padding-top: 2.8rem;
+}
+
+.container {
+    width: 1250px;
+    margin: 0 auto;
+}
