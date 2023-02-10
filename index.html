@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/imask"></script>
     <title>ЭЛИПСЛЕД</title>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <nav class="nav">
-                <img class="header__logo" src="img/logo.png" alt="">
-                <div class="nav__menu">
+            <div class="header__top">
+                <a href="index.html">
+                    <img class="header__logo" src="img/logo.png" alt="Элипслед">
+                </a>
+                <nav class="header__menu">
                     <ul>
                         <li><a href="#">Главная</a></li>
                         <li><a href="#">Нам доверяют</a></li>
@@ -20,12 +23,67 @@
                         <li><a href="#">Сертификаты</a></li>
                         <li><a href="#">Где нас найти?</a></li>
                     </ul>
-                <div class="phone">89152543992</div>
+                </nav>
+                <a class="header__phone" href="tel:89152543992">89152543992</a>
+            </div> 
+
+            <div class="header__description">
+                <h1 class="header__title">
+                    <div class="title__box">У нас вы найдете лучшие</div> 
+                    <div class="title__box">светодиодные лампы</div> 
+                    <div class="title__box">для животоводства</div> 
+                </h1>
+                <h3 class="header__text">
+                    Оставьте нам свой номер,<br> и получите <span>бесплатный</span> рассчет специально для вас!
+                </h3>
+                <div class="header__form">
+                    <form action="#">
+                        <input id="phone"
+                               type="tel" 
+                               name="tel" 
+                               size="11"
+                               placeholder="7(xxx) xxx xx xx"
+                               pattern="7[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                        <input class="header__btn" type="submit" value="Отправить">
+                    </form>
                 </div>
-            </nav> 
-            <div class="gg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint quaerat officia, quasi id obcaecati rem ab ad debitis, cupiditate suscipit optio sed cum inventore temporibus itaque, corporis esse pariatur.</div>   
+            </div>
+        <div class="header__image"></div>
         </header>
+
+        <section class="about">
+            <h2 class="about__title">Расскажем вам немного о себе</h2>
+            <h3s class="about__title_second">
+                Мы ценим ваше время, по этому мы постараемся рассказать о <span>главном вкратце!</span>
+            </h3s>
+            <div class="about__block">
+                <div class="about__image">
+                    <img src="img/about-img.png" alt="lamp-img">
+                </div>
+                <div class="about__box">
+                    <div class="about__element">1</div>
+                    <p class="about__text">
+                        Наша компания была основана в 2015 году, название ей «ЭлипсЛед». Занимаемся мы производством светильников для животноводства
+                    </p>
+                    <div class="about__element">2</div>
+                    <p class="about__text">
+                        Работаем мы исключительно на собственном оборудовании и только с качественным сырьем.
+                    </p>
+                    <div class="about__element">3</div>
+                    <p class="about__text">
+                        С помощью команды наших специалистов мы смогли добиться одного из самых высоких уровней качества светодиодных светильников для свиноводства, КРС, выращивания грибов!
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
-    
+
+    <script>
+        var element = document.getElementById('phone');
+        var maskOptions = {
+            mask: '{7}(000)000-00-00'
+        };
+        var mask = IMask(element, maskOptions);
+    </script>
 </body>
 </html>
