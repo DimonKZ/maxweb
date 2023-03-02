@@ -309,6 +309,9 @@ li {
     html {
         font-size: 6px;
     }
+    .header {
+        height: 70vh;
+    }
 }
 
 @media (max-width: 900px) {
@@ -454,14 +457,30 @@ li {
 }
 
 @media (max-width: 575px) {
+    .header{
+        height: 80vh;
+    }
     .about {
         padding-top: 10rem;
     }
 }
 
 @media (max-width: 320px) {
+    .header{
+        height: 80vh;
+    }
+
+    .header__menu {
+        width: 70%;
+    }
+
     .header__title {
-        font-size: 4.5rem;
+        font-size: 4rem;
+    }
+
+    .title__box {
+        box-shadow: 0 -1rem 0 #FFF inset,
+            0 -1.7rem 0 #FB973B inset;
     }
 
     .about {
@@ -469,7 +488,9 @@ li {
     }
 
     .about__title {
-        font-size: 4.1rem;
+        font-size: 3.6rem;
+        box-shadow: 0 -1rem 0 #FFF inset,
+            0 -1.7rem 0 #FB973B inset;
     }
 
     .about__title_second {
